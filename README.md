@@ -1,50 +1,42 @@
-# sapper-template
+# Jewelry.shop
 
-The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
-
-
-## Getting started
+Commerce meets social, project with [Sapper](https://github.com/sveltejs/sapper).
 
 
-### Using `degit`
+## Project info
 
-To create a new Sapper project based on Rollup locally, run
+### Frameworks / Libraries
 
-```bash
-npx degit "sveltejs/sapper-template#rollup" my-app
-```
+- Svelte
+- Sapper
+- IBM Plex Sans
+- IBM Plex Sans KR
+- Rollup
+- Polka
+- Sirv
+- carbon-components-svelte (IBM Carbon Design)
+- PostCSS
+- Autoprefixer
+- Node-sass
 
-For a webpack-based project, instead run
+### Project setup
 
-```bash
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
+1. `git clone https://github.com/composite/jewelry.shop.git`
+2. `npm i`
+3. `npm run dev`
 
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository.
+### Project Build
 
-Replace `my-app` with the path where you wish to create the project.
+1. `npm run build`
 
+### Project Export
 
-### Using GitHub templates
+1. `npm run export`
 
-Alternatively, you can create the new project as a GitHub repository using GitHub's template feature.
+### Proejct test
 
-Go to either [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) and click on "Use this template" to create a new project repository initialized by the template.
+1. `npm run start`
 
-
-### Running the project
-
-Once you have created the project, install dependencies and run the project in development mode:
-
-```bash
-cd my-app
-npm install # or yarn
-npm run dev
-```
-
-This will start the development server on [localhost:3000](http://localhost:3000). Open it and click around.
-
-You now have a fully functional Sapper project! To get started developing, consult [sapper.svelte.dev](https://sapper.svelte.dev).
 
 ### Using TypeScript
 
@@ -146,7 +138,3 @@ Because of that, it's essential that the bundler doesn't treat the package as an
 npm install -D @sveltejs/svelte-virtual-list
 ```
 
-
-## Bugs and feedback
-
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
