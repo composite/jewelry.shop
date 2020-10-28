@@ -42,6 +42,7 @@ Commerce meets social, project with [Sapper](https://github.com/sveltejs/sapper)
 
 ## CSS Strategy
 
+[Made with SVELTE](https://madewithsvelte.com/)<br>
 [So you need a CSS utility library?](https://css-tricks.com/need-css-utility-library/)
 
 - [SUIT CSS](https://suitcss.github.io/)
