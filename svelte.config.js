@@ -1,14 +1,14 @@
 // svelte.config.js
-import sveltePreprocess from 'svelte-preprocess';
-import autoprefixer from "autoprefixer";
+const sveltePreprocess = require('svelte-preprocess');
+const autoprefixer = require('autoprefixer');
 
-export default {
+module.exports = {
   preprocess: sveltePreprocess({
     scss: {
       includePaths: ["src"],
     },
     postcss: {
       plugins: [autoprefixer],
-    },
+    }
   })
 };
