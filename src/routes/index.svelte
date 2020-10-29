@@ -1,5 +1,12 @@
 <script>
+  import { onMount } from 'svelte';
+  import layout from '../store/layout';
   import successkid from "images/successkid.jpg";
+
+	onMount(() => {
+		layout.set('');
+	});
+
 </script>
 
 <style>

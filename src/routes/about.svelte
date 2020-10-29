@@ -1,3 +1,13 @@
+<script>
+  import { onMount } from 'svelte';
+  import layout from '../store/layout';
+
+	onMount(() => {
+		layout.set('empty');
+	});
+
+</script>
+
 <svelte:head>
 	<title>About</title>
 </svelte:head>
