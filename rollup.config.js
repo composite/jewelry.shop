@@ -8,10 +8,10 @@ import babel from "@rollup/plugin-babel";
 import {
   terser
 } from "rollup-plugin-terser";
-import sveltePreprocess from "svelte-preprocess";
-import autoprefixer from "autoprefixer";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+
+const { preprocess } = require('./svelte.config.js');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -22,15 +22,6 @@ const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
-
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ["src"],
-  },
-  postcss: {
-    plugins: [autoprefixer],
-  },
-});
 
 export default {
   client: {

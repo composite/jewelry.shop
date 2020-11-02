@@ -211,3 +211,6 @@ dist
 
 # MacOS related
 .DS_Store
+
+# CSS related
+static/global.css
