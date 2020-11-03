@@ -214,3 +214,4 @@ dist
 
 # CSS related
 static/global.css
+.css/

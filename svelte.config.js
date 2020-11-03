@@ -6,6 +6,9 @@ module.exports = {
     scss: {
       includePaths: ["src"],
     },
-    postcss: true
+    postcss: true,
+    defaults: {
+      style: 'scss'
+    }
   })
 };
