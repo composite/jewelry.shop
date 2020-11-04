@@ -6,12 +6,12 @@
 </script>
 
 <nav class="flex">
-  <div class="flex-auto">
+  <div>
     <Logo width="32" height="32" class="align-middle" />
     Server
   </div>
   <div class="flex-grow"></div>
-  <div class="flex-auto">
+  <div>
     asd
   </div>
 </nav>

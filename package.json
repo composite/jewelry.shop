@@ -5,7 +5,7 @@
   "license": "DZR",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel dev:pcss dev:run",
+    "dev": "run-p dev:pcss dev:run",
     "dev:pcss": "postcss src/styles/global.pcss -o static/global.css -w",
     "dev:run": "sapper dev",
     "css:pcss": "postcss src/styles/global.pcss -o static/global.css",

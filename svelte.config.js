@@ -6,9 +6,11 @@ module.exports = {
     scss: {
       includePaths: ["src"],
     },
-    postcss: true,
+    postcss: {
+      plugins: [require('autoprefixer')],
+    },
     defaults: {
-      style: 'scss'
+      // style: 'scss'
     }
   })
 };
