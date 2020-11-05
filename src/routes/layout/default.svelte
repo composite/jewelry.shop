@@ -9,7 +9,7 @@
 </script>
 <style>
   nav {
-    @apply m-4;
+    @apply p-2 m-2 border-b border-primary-500;
   }
 </style>
 <nav class="flex">

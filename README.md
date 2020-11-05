@@ -4,25 +4,43 @@ Commerce meets social, project with [Sapper](https://github.com/sveltejs/sapper)
 
 ## Project info
 
+SSR!
+
+### Project Environment
+
+- node.js (lastest LTS, [`nvm`](https://github.com/nvm-sh/nvm) recommended.)
+- `npm` (`yarn` is having some issue of this project)
+- `git` (on Windows: Git for Windows or WSL. WSL2 is recommended.)
+- Visual Studio Code (or suitable IDE such as Webstorm...)
+
 ### Frameworks / Libraries
 
 - Svelte
 - Sapper
-- IBM Plex Sans
+- IBM Plex Sans (and mono)
 - IBM Plex Sans KR
 - Rollup
 - Polka
 - Sirv
-- carbon-components-svelte (IBM Carbon Design)
+- smelte (Material UI)
 - PostCSS
+- Tailwind
 - Autoprefixer
-- Node-sass
 
 ### Project setup
 
-1. `git clone https://github.com/composite/jewelry.shop.git`
-2. `npm i`
-3. `npm run dev`
+1. Typical: `git clone https://github.com/composite/jewelry.shop.git`
+   - SSH: `git clone git@github.com:composite/jewelry.shop.git`
+2. `npm i` (`npm ci` if you want clean project dependency)
+
+### Project live development
+
+1. `npm run css:pcss` (only run each edit `src/styles/global.pcss` file.)
+2. `npm run dev:run` (Auto reload when edit any files in `src`.)
+
+### Project test
+
+- TODO
 
 ### Project Build
 
@@ -40,22 +58,74 @@ Commerce meets social, project with [Sapper](https://github.com/sveltejs/sapper)
 
 - IBM Plex: Using CDN instead of local (service worker storage issue)
 
-## CSS Strategy
+### VS Code extensions
 
-[Made with SVELTE](https://madewithsvelte.com/)<br>
-[So you need a CSS utility library?](https://css-tricks.com/need-css-utility-library/)
+**BOLD is strongly recommended for dev!!!**
 
-- [SUIT CSS](https://suitcss.github.io/)
-- [TACHYONS](https://github.com/tachyons-css/tachyons)
-- [turretcss](https://github.com/turretcss/turretcss)
+- **Auto Close Tag**
+- **Auto Rename Tag**
+- **Auto Complete Tag**
+- Better Comments
+- Bracket Pair Colorizer
+- Debugger for Chrome
+- **PostCSS Syntax**
+- **Auto Import**
+- Bookmarks
+- **EditorConfig for VS Code**
+- Git History
+- GitLens
+- HTML CSS Support
+- Import Cost
+- intent-rainbow
+- IntelliSense for CSS class in HTML
+- **Markdown All in One**
+- markdownlint
+- **npm**
+- **npm IntelliSense**
+- **Path Intellisense**
+- REST Client
+- **stylelint**
+- **Svelte for VS Code**
+- **Svelte Auto Import**
+- **Svelte Intellisense**
+- **Tailwind CSS IntelliSense**
+- Terminal
+
+### Recommend settings for VS Code (`settings.json`)
+
+- obtain node path for `which node` on *nix, `where node` for windows.
+
+```json
+{
+    "telemetry.enableTelemetry": false,
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false,
+    "svelte.language-server.runtime": "/absolute/path/to/node",
+    "svelte.plugin.css.diagnostics.enable": false,
+}
+```
+
+Why should disable validation CSS feature? because of svelte CSS diagnostics issue.
+
+## FAQs
+
+- `Cannot find module 'polka'` when build/dev sapper.
+  - It uses bleeding edge version of `polka` module, sometimes its status may be missing or corrupted.
+  - just type `npm i` in console again and retry. It should be okay.
+- It seems edited contents are not changed. even clicking refresh page.
+  - It's known issue of Service Worker cache mechanism. open devtools and try clean cache and reload.
+
+## Styling Strategy
+
+[Made with SVELTE](https://madewithsvelte.com/)
+
 - [Tailwind CSS](https://tailwindcss.com/)
   - [Smelte](https://smeltejs.com/)
   - [Notus Svelte - FREE TAILWIND CSS UI KIT AND ADMIN](https://www.creative-tim.com/product/notus-svelte?affiliate_id=104113)
     - [Github](https://github.com/creativetimofficial/notus-svelte)
     - [Live Preview](https://demos.creative-tim.com/notus-svelte/)
     - [Docs](https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus)
-- [Basscss - Low-Level CSS Toolkit](https://basscss.com/)
-- [Yogurt CSS](https://yogurtcss.netlify.app/)
 
 ## Directory structure
 
