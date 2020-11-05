@@ -18,10 +18,10 @@ const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
+  (warning.code === "PLUGIN_WARNING" && warning.pluginCode === "a11y-label-has-associated-control") || // smelte issue
   (warning.code === "MISSING_EXPORT" && /'preload'/.test(warning.message)) ||
-  (warning.code === "CIRCULAR_DEPENDENCY" &&
-    /[/\\]@sapper[/\\]/.test(warning.message)) ||
-  onwarn(warning);
+  (warning.code === "CIRCULAR_DEPENDENCY" && /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  (/*console.log(JSON.stringify(warning)), */onwarn(warning));
 
 export default {
   client: {
