@@ -6,7 +6,6 @@
   from {background-position: 0% 0%}
   to {background-position: 100% 0%}
 }
-
 .logo {
   display: initial;
   background: #7f0080;

@@ -49,7 +49,7 @@
   <title>Sapper project template</title>
 </svelte:head>
 
-<h1 class="asd">Great success! 123</h1>
+<h1 class="asd">Great success!</h1>
 
 <figure>
   <img alt="Success Kid" src={successkid} />

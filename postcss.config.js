@@ -13,11 +13,19 @@ const presetEnv = require('postcss-preset-env')({
     'nesting-rules': true,
   },
 });
-const syntax = 'postcss-scss'
+const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: [
+    './src/**/*.html',
+    './src/**/*.svelte'
+  ],
 
+  whitelistPatterns: [/svelte-/],
+
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
 const plugins =
   process.env.NODE_ENV === 'production'
-    ? [postcssImport, tailwind, presetEnv, cssnano]
+    ? [postcssImport, tailwind, presetEnv, cssnano, purgecss]
     : [postcssImport, tailwind, presetEnv];
 
-module.exports = { syntax, plugins };
+module.exports = { plugins };
