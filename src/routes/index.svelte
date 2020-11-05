@@ -1,12 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, getContext } from 'svelte';
   import layout from '../store/layout';
   import successkid from "images/successkid.jpg";
-
+  const location = getContext('location');
 	onMount(() => {
 		layout.set('');
 	});
-
+  //$: console.log($location);
 </script>
 
 <style>
