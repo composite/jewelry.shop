@@ -1,6 +1,5 @@
-const smelte = require('smelte/tailwind.config');
 
-module.exports = smelte({
+module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
@@ -22,7 +21,16 @@ module.exports = smelte({
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#b027b0",
+        secondary: "#009688",
+        error: "#f44336",
+        success: "#4caf50",
+        alert: "#ff9800",
+        dark: "#212121",
+      }
+    },
   },
   plugins: [require('@tailwindcss/typography')],
-})
+}

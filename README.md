@@ -22,7 +22,6 @@ SSR!
 - Rollup
 - Polka
 - Sirv
-- smelte (Material UI)
 - PostCSS
 - Tailwind
 - Autoprefixer

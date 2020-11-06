@@ -29,12 +29,6 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     './src/**/*.html',
     './src/**/*.svelte'
   ],
-  extractors: [
-    {
-      extractor: require("smelte/src/utils/css-extractor.js"),
-      extensions: ["svelte"]
-    }
-  ],
   whitelist: [...defaultWhitelist],
   whitelistPatterns: [...defaultWhitelistPatterns],
   whitelistPatternsChildren: [...defaultWhitelistPatterns],

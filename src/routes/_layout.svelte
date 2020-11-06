@@ -1,22 +1,24 @@
 <script>
-  import { onMount, setContext } from "svelte";
+  import { onMount, onDestroy, setContext } from "svelte";
   import { writable } from "svelte/store";
   import Default from "./layout/default.svelte";
   import layoutStore from '../store/layout';
   let layout;
-  layoutStore.subscribe($l => {
+  const unscribe = layoutStore.subscribe($l => {
     switch($l) {
       case 'empty': layout = null;break;
       default: layout = Default;break;
     }
-  })
+  });
   export let segment;
   const location = writable({});
+  setContext('segment', [segment]);
   setContext('location', { subscribe: location.subscribe });
   onMount(() => historyChange({target: window}));
+  onDestroy(() => unscribe());
   function historyChange(e) {
     const { href, protocol, host, hostname, port, pathname, search, hash, origin } = e.target.location;
-    const parameters = search.split('&').reduce((map, kv) => {
+    const parameters = Object.seal(search.split('&').reduce((map, kv) => {
       kv = kv.split('=');
       const k = kv[0], v = kv[1];
       if(k in map) {
@@ -26,7 +28,7 @@
         }
       } else map[k] = v;
       return map;
-    }, {});
+    }, {}));
     $location = { href, protocol, host, hostname, port, pathname, search, hash, origin, parameters };
   }
 </script>
