@@ -32,5 +32,22 @@ module.exports = {
       }
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  variants: [
+    "responsive",
+    "group-hover",
+    "focus-within",
+    "first",
+    "last",
+    "odd",
+    "even",
+    "hover",
+    "focus",
+    "active",
+    "visited",
+    "disabled",
+  ],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/custom-forms')
+  ],
 }

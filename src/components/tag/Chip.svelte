@@ -1,4 +1,7 @@
 <script>
+  import Fa from 'svelte-fa'
+  import { faFlag } from '@fortawesome/free-solid-svg-icons'
+
   export let size = '';
   export let color = '';
   export let textColor = '';
@@ -26,4 +29,4 @@
   class:text-sm={size === 'sm'}
   class:text-2xl={size === 'lg'}
   class:text-4xl={size === 'xl'}
-><slot/></span>
+><Fa icon={faFlag} /><slot/></span>

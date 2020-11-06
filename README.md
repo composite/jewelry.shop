@@ -25,6 +25,8 @@ SSR!
 - PostCSS
 - Tailwind
 - Autoprefixer
+- svelte-fa
+- [font-awesome](https://fontawesome.com/icons?d=gallery)
 
 ### Project setup
 
