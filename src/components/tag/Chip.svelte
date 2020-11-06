@@ -29,4 +29,4 @@
   class:text-sm={size === 'sm'}
   class:text-2xl={size === 'lg'}
   class:text-4xl={size === 'xl'}
-><Fa icon={faFlag} /><slot/></span>
+><Fa icon={faFlag} /> <slot/></span>

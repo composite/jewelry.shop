@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import commonjs from "@rollup/plugin-commonjs";
 import url from "@rollup/plugin-url";
+import Alias from "@rollup/plugin-alias";
 import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
 import {
@@ -16,6 +17,15 @@ const { preprocess } = require('./svelte.config.js');
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+
+const alias = Alias({
+  entries: [
+    { find: 'utils', replacement: './src/utils' },
+    { find: 'components', replacement: './src/components' },
+    { find: 'styles', replacement: './src/styles' },
+    { find: 'store', replacement: './src/store' }
+  ]
+});
 
 const onwarn = (warning, onwarn) =>
   (warning.code === "PLUGIN_WARNING" && warning.pluginCode === "a11y-label-has-associated-control") ||
@@ -76,6 +86,7 @@ export default {
       terser({
         module: true,
       }),
+      alias
     ],
 
     preserveEntrySignatures: false,
@@ -105,6 +116,7 @@ export default {
         dedupe: ["svelte"],
       }),
       commonjs(),
+      alias
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules
