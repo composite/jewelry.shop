@@ -18,6 +18,13 @@ module.exports = {
   //   content: ['./src/**/*.svelte', './src/**/*.html'],
   // },
   theme: {
+    screens: {
+      'xs': {max: '599px'},
+      'sm': {min: '600px', max: '1023px'},
+      'md': {min: '1024px', max: '1439px'},
+      'lg': {min: '1440px', max: '1919px'},
+      'xl': {min: '1920px'}
+    },
     container: {
       center: true,
     },
@@ -29,6 +36,10 @@ module.exports = {
         success: "#4caf50",
         alert: "#ff9800",
         dark: "#212121",
+      },
+      flex: {
+        default: '0 0 auto',
+        inherit: 'inherit'
       }
     },
   },

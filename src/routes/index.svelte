@@ -1,7 +1,6 @@
 <script>
   import { onMount, getContext } from 'svelte';
   import layout from '../store/layout';
-  import successkid from "images/successkid.jpg";
   const location = getContext('location');
 	onMount(() => {
 		layout.set('');
@@ -10,53 +9,65 @@
 </script>
 
 <style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
+  .goods-list {
+    @apply w-full flex flex-wrap justify-around;
   }
 
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
+  @screen xs {
+    .goods-list > article {
+      @apply p-1 flex-auto;
+    }
   }
 
-  figure {
-    margin: 0 0 1em 0;
+  @screen sm {
+    .goods-list > article {
+      @apply p-1;
+
+      flex: 0 0 50%;
+    }
   }
 
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
+  @screen md {
+    .goods-list > article {
+      @apply p-2;
+
+      flex: 0 0 33.333333%;
+    }
   }
 
-  p {
-    margin: 1em auto;
+  @screen lg {
+    .goods-list > article {
+      @apply p-3;
+
+      flex: 0 0 25%;
+    }
   }
 
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
+  @screen xl {
+    .goods-list > article {
+      @apply p-4;
+
+      flex: 0 0 20%;
     }
   }
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Jewery Server</title>
 </svelte:head>
 
-<h1 class="asd">Great success!</h1>
+<article class="prose-xl max-w-none py-4 bg-blue-200">
+  <h2 class="mx-auto w-1/2">Jewelry</h2>
+  <p class="mx-auto w-1/2">Our jewelry builds on a legacy of over 180 years of craftsmanship with beautifully designed necklaces and pendants, bracelets, rings and more.</p>
+</article>
 
-<figure>
-  <img alt="Success Kid" src={successkid} />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live
-    reloading.</strong>
-</p>
+<section class="goods-list">
+  {#each Array(10) as _, i}
+  <article>
+    <figure class="mx-auto text-center">
+      <figcaption>Jewelry Name {i+1}</figcaption>
+      <img alt="Jewelry Name {i+1}" src="https://picsum.photos/seed/{i+1}/256/256" >
+    </figure>
+  </article>
+  {/each}
+</section>
