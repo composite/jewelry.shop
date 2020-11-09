@@ -10,7 +10,7 @@
 </script>
 <style>
   span {
-    @apply px-4 py-2 ml-1 mb-1 rounded-full;
+    @apply px-4 py-2 ml-1 mb-1 rounded-full flex-default;
 
     display: inline-block;
   }

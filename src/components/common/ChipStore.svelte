@@ -6,7 +6,7 @@
 </script>
 <style>
   .wrapper {
-    @apply mx-2 pb-2;
+    @apply flex mx-2 pb-2;
 
     overflow-x: auto;
     overflow-y: hidden;
