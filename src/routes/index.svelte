@@ -26,4 +26,4 @@
   <p class="mx-auto">Our jewelry builds on a legacy of over 180 years of craftsmanship with beautifully designed necklaces and pendants, bracelets, rings and more.</p>
 </article>
 
-<GoodsGrid />
+<GoodsGrid list={Array(10)} />

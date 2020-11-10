@@ -1,9 +1,25 @@
 <script>
+  import Fa from 'svelte-fa'
+  import { faHeart } from '@fortawesome/free-regular-svg-icons'
+
   export let seq;
+  export let info;
 </script>
 <style>
   article {
-    @apply flex-auto m-1;
+    --goods-width: 240px;
+
+    width: var(--goods-width);
+    height: calc(var(--goods-width) * 3 / 2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @apply flex-auto m-1 rounded-md relative;
+  }
+
+  article > :global(svg) {
+    border: 1px solid white;
   }
 
   @screen ln {
@@ -12,9 +28,7 @@
     }
   }
 </style>
-<article>
-  <figure class="mx-auto text-center">
-    <img alt="Jewelry Name {seq}" src="https://loremflickr.com/240/320/diamond,ring/all?lock={seq}" width="100%" height="100%" >
-    <figcaption>Jewelry Name {seq}</figcaption>
-  </figure>
+<article style="background-image: url(https://loremflickr.com/240/320/diamond,ring/all?lock={seq})">
+  <Fa icon={faHeart} />
+  Jewelry Name {seq}
 </article>

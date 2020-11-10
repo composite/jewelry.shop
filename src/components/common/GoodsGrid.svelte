@@ -1,5 +1,13 @@
 <script>
   import Goods from '../tag/Goods.svelte';
+
+  export let list = [];
+
+  $: {
+    if(!Array.isArray(list)) {
+      list = [];
+    }
+  }
 </script>
 <style>
   .goods-list {
@@ -7,7 +15,7 @@
   }
 </style>
 <section class="goods-list">
-  {#each Array(10) as _, i}
-  <Goods seq="{i+1}" />
+  {#each list as info, i}
+  <Goods seq="{i+1}" {info} />
   {/each}
 </section>
