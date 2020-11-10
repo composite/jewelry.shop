@@ -5,6 +5,12 @@
   article {
     @apply flex-auto m-1;
   }
+
+  @screen ln {
+    article {
+      @apply flex-default;
+    }
+  }
 </style>
 <article>
   <figure class="mx-auto text-center">

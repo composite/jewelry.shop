@@ -20,9 +20,19 @@ module.exports = {
   theme: {
     screens: {
       'xs': {max: '599px'},
+
       'sm': {min: '600px', max: '1023px'},
+      'sx': {max: '1023px'},
+      'sn': {min: '600px'},
+
       'md': {min: '1024px', max: '1439px'},
+      'mx': {max: '1439px'},
+      'mn': {min: '1024px'},
+
       'lg': {min: '1440px', max: '1919px'},
+      'lx': {max: '1919px'},
+      'ln': {min: '1440px'},
+
       'xl': {min: '1920px'}
     },
     container: {
