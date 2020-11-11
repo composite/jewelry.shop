@@ -10,7 +10,7 @@
     --goods-width: 240px;
 
     width: var(--goods-width);
-    height: calc(var(--goods-width) * 3 / 2);
+    height: calc(var(--goods-width) * 4 / 3);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -18,8 +18,12 @@
     @apply flex-auto m-1 rounded-md relative;
   }
 
-  article > :global(svg) {
-    border: 1px solid white;
+  article > button {
+    font-size: 0.85rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0.6rem;
+
+    @apply rounded-full absolute right-0 m-2 text-white;
   }
 
   @screen ln {
@@ -29,6 +33,6 @@
   }
 </style>
 <article style="background-image: url(https://loremflickr.com/240/320/diamond,ring/all?lock={seq})">
-  <Fa icon={faHeart} />
+  <button><Fa icon={faHeart} /></button>
   Jewelry Name {seq}
 </article>
