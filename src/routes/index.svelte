@@ -9,7 +9,7 @@
   //$: console.log($location);
 </script>
 
-<style>
+<style lang="scss">
   article.prose-xl {
     & > * {
       max-width: 50%;

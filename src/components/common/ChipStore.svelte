@@ -4,7 +4,7 @@
   import Chip from "../tag/Chip.svelte";
 
 </script>
-<style>
+<style lang="scss">
   .wrapper {
     @apply flex mx-2 pb-2;
 

@@ -6,9 +6,7 @@ import url from "@rollup/plugin-url";
 import Alias from "@rollup/plugin-alias";
 import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
-import {
-  terser
-} from "rollup-plugin-terser";
+import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 
@@ -43,8 +41,10 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        dev,
-        hydratable: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         emitCss: true,
         preprocess
       }),
@@ -102,9 +102,12 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        generate: "ssr",
-        hydratable: true,
-        dev,
+        compilerOptions: {
+          generate: "ssr",
+          hydratable: true,
+          dev
+        },
+        emitCss: false,
         preprocess
       }),
       url({
