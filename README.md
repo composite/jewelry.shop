@@ -9,21 +9,22 @@ SSR!
 ### Project Environment
 
 - node.js (lastest LTS, [`nvm`](https://github.com/nvm-sh/nvm) recommended.)
-- `npm` (`yarn` is having some issue of this project)
+- `yarn` is recommended (`npm` can also use.)
 - `git` (on Windows: Git for Windows or WSL. WSL2 is recommended.)
 - Visual Studio Code (or suitable IDE such as Webstorm...)
 
 ### Frameworks / Libraries
 
-- Svelte
-- Sapper
+- **Svelte**
+- **Sapper**
 - IBM Plex Sans (and mono)
 - IBM Plex Sans KR
-- Rollup
+- **Rollup**
 - Polka
 - Sirv
 - PostCSS
-- Tailwind
+- **Tailwind**
+- **SASS** (dart-sass)
 - Autoprefixer
 - svelte-fa
 - [font-awesome](https://fontawesome.com/icons?d=gallery)
@@ -36,8 +37,9 @@ SSR!
 
 ### Project live development
 
-1. `npm run css:pcss` (only run each edit `src/styles/global.pcss` file.)
-2. `npm run dev:run` (Auto reload when edit any files in `src`.)
+1. `npm run dev` all in one dev mode
+2. `npm run dev:css` (compile `src/styles/global.scss` file.)
+3. `npm run dev:run` (Auto reload when edit any files in `src`.)
 
 ### Project test
 
@@ -68,8 +70,11 @@ SSR!
 - **Auto Complete Tag**
 - Better Comments
 - Bracket Pair Colorizer
-- Debugger for Chrome
-- **PostCSS Syntax**
+- Debugger for browsers
+  - Debugger for Chrome
+  - Debugger for Edge
+  - Debugger for Firefox
+- PostCSS Syntax
 - **Auto Import**
 - Bookmarks
 - **EditorConfig for VS Code**
@@ -79,17 +84,17 @@ SSR!
 - Import Cost
 - intent-rainbow
 - IntelliSense for CSS class in HTML
-- **Markdown All in One**
+- *Markdown All in One*
 - markdownlint
 - **npm**
 - **npm IntelliSense**
 - **Path Intellisense**
 - REST Client
-- **stylelint**
-- **Svelte for VS Code**
-- **Svelte Auto Import**
-- **Svelte Intellisense**
-- **Tailwind CSS IntelliSense**
+- ***stylelint***
+- ***Svelte for VS Code***
+- ***Svelte Auto Import***
+- ***Svelte Intellisense***
+- ***Tailwind CSS IntelliSense***
 - Terminal
 
 ### Recommend settings for VS Code (`settings.json`)
