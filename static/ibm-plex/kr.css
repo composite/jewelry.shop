@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("IBM Plex Sans KR Bold"), local("IBMPlexSansKR-Bold"), url("woff2-kr/IBMPlexSansKR-Bold.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 200;
+  src: local("IBM Plex Sans KR ExtraLight"), local("IBMPlexSansKR-ExtraLight"), url("woff2-kr/IBMPlexSansKR-ExtraLight.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-ExtraLight.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local("IBM Plex Sans KR Light"), local("IBMPlexSansKR-Light"), url("woff2-kr/IBMPlexSansKR-Light.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Light.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("IBM Plex Sans KR Medium"), local("IBMPlexSansKR-Medium"), url("woff2-kr/IBMPlexSansKR-Medium.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM Plex Sans KR"), local("IBMPlexSansKR"), url("woff2-kr/IBMPlexSansKR-Regular.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 600;
+  src: local("IBM Plex Sans KR SemiBold"), local("IBMPlexSansKR-SemiBold"), url("woff2-kr/IBMPlexSansKR-SemiBold.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-SemiBold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 450;
+  src: local("IBM Plex Sans KR Text"), local("IBMPlexSansKR-Text"), url("woff2-kr/IBMPlexSansKR-Text.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Text.woff") format("woff"); }
+
+@font-face {
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local("IBM Plex Sans KR Thin"), local("IBMPlexSansKR-Thin"), url("woff2-kr/IBMPlexSansKR-Thin.woff2") format("woff2"), url("woff-kr/IBMPlexSansKR-Thin.woff") format("woff"); }
