@@ -16,7 +16,7 @@
 		"@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.4.0",
 		"autoprefixer": "^10.2.5",
-		"cssnano": "^4.1.10",
+		"cssnano": "^4.1.11",
 		"eslint": "^7.23.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.1.2",
@@ -31,7 +31,7 @@
 		"svelte": "^3.37.0",
 		"svelte-fa": "^2.2.0",
 		"svelte-preprocess": "^4.7.0",
-		"tailwindcss": "^2.0.4",
+		"tailwindcss": "^2.1.1",
 		"vite": "^2.1.5"
 	},
 	"type": "module",
